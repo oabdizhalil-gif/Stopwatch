@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is your project</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Finlandica:ital,wght@0,400..700;1,400..700&family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Whisper&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compass Plus Reader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    
-    <div id="main">
-        <h1>Stopwatch</h1>
-        <div id="container">
-            <div id="display">
-                00:00:00:00
-            </div>
-            <div id="controller">
-                <button id="startBtn" onclick="startFn()">Start</button>
-                <button id="resetBtn" onclick="resetFn()">Reset</button>
-                <button id="stopBtn" onclick="stopFn()">Stop</button>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    <script src="index.js"></script>
+  <div class="app-shell">
+    <header class="topbar">
+      <button id="logoBtn" class="logo" type="button" title="Home">
+        <span class="logo-mark"></span>
+        <span class="logo-text">Compass <strong>PLUS</strong></span>
+      </button>
+      <button id="menuBtn" class="menu-btn" type="button" title="Admin">☰</button>
+    </header>
+
+    <main id="app" class="page"></main>
+  </div>
+
+  <div id="wordPopup" class="word-popup hidden" role="dialog" aria-live="polite"></div>
+
+  <template id="scrollRailTemplate">
+    <aside class="scroll-rail" aria-hidden="true">
+      <button class="scroll-arrow" data-dir="up">⌃</button>
+      <div class="scroll-line"></div>
+      <button class="scroll-arrow" data-dir="down">⌄</button>
+    </aside>
+  </template>
+
+  <script src="index.js"></script>
 </body>
 </html>
